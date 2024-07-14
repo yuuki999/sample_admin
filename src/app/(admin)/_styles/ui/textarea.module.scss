@@ -1,0 +1,19 @@
+@use "../../_const/const.scss" as const;
+
+.textarea {
+  border-radius: 5px;
+  border: 1px solid const.$lightGraySolid;
+  padding: 16px 16px;
+  resize: none;
+
+  &:focus {
+    outline: none;
+    border-color: const.$blue;
+  }
+}
+
+.error_msg {
+  color: const.$errorColor;
+  margin-top: 2px;
+  font-size: 12px;
+}

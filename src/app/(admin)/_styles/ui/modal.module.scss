@@ -1,0 +1,43 @@
+.modal_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 32px;
+  width: 85%;
+  height: 90%;
+  outline: none;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.modal_table {
+  margin-bottom: 40px;
+}
+
+.modal_header {
+  padding: 8px;
+}
+
+.button_container {
+  display: flex;
+  gap: 16px;
+  align-self: flex-end;
+}
+
+.update_button {
+  margin-top: 32px !important;
+}
+
+.delete_button {
+  margin-top: 32px !important;
+  background-color: #FF6B6B !important; 
+}
+
+.close_button {
+  margin-top: 32px !important;
+}

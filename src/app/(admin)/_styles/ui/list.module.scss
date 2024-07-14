@@ -1,0 +1,73 @@
+.container {
+  margin-top: 16px;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 5px;
+  height: 504px;
+  overflow: scroll;
+
+  @media (max-height: 768px) {
+    height: 400px;
+  }
+}
+
+@mixin tableCommonStyles {
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.table_item {
+  @include tableCommonStyles;
+  padding: 8px;
+  height: 48px;
+  line-height: 24px;
+  max-height: 48px;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: rgba(11, 99, 248, 0.05);
+  }
+
+  td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.table_title {
+  @include tableCommonStyles;
+}
+
+.fixed_header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.table_no {
+  width: 10%;
+}
+
+.table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.fullHeightRow {
+  height: 504px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.centeredMessage {
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}

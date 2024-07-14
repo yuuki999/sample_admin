@@ -1,0 +1,51 @@
+@use "../../_const/const.scss" as const;
+
+.container {
+  margin-left: const.$sidebarWidth + 24px;
+  margin-right: 24px;
+  background-color: const.$mainBackgroundColor;
+  overflow: hidden;
+  font-size: 14px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_container {
+  display: flex;
+  flex: 1;
+}
+
+.flex_container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  
+  > .searchButtonContainer {
+    order: 2; // 2番目に表示
+    flex-basis: 100%; // 検索ボタンを含むコンテナは全幅を使用
+    max-width: 100%; // 最大幅も100%に設定
+    display: flex; // フレックスコンテナとして設定
+    align-items: center; // アイテムを中央揃えにする
+    gap: 8px; // アイテムの間隔を設定
+    justify-content: flex-end; 
+  }
+
+  // TODO: かなり小さい解像度の場合は考慮してもいいかも。
+  // @media (max-width: 1450px) {
+  //   flex-direction: column; // アイテムを縦に並べ替える
+
+  //   > div {
+  //     width: 100%;
+  //   }
+  // }
+}
+
+// .flex_container .flex_container_column {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.footer_container {
+  height: 104px;
+}

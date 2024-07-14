@@ -1,0 +1,49 @@
+@use "../../_const/const.scss" as const;
+
+.items_per_page_container {
+  display: flex;
+  flex-direction: row !important;
+  height: 30px;
+  gap: 8px;
+  margin-top: 25px;
+  line-height: 32px;
+  border-radius: 8px;
+
+  @media (max-width: 1400px) {
+    display: none !important;
+  }
+}
+
+.items_per_page_select {
+  border-radius: 8px;
+  border: 1px solid rgba(19, 19, 19, 0.25);
+  height: 32px;
+  padding: 0 8px;
+
+  &:focus {
+    border-color: const.$blue;
+    outline: none;
+  }
+  &:active {
+    border-color: const.$blue;
+  }
+}
+
+.no_margin_top {
+  margin-top: 0px !important;
+}
+
+.items_per_page_select__small {
+  border-radius: 8px;
+  border: 1px solid rgba(19, 19, 19, 0.25);
+  height: 26px;
+  padding: 0 8px;
+
+  &:focus {
+    border-color: const.$blue;
+    outline: none;
+  }
+  &:active {
+    border-color: const.$blue;
+  }
+}

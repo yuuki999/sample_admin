@@ -1,0 +1,14 @@
+.radioLabel {
+  font-size: 2px !important;
+  font-weight: lighter;
+}
+
+.radioGroupHorizontal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radioGroupHorizontal .MuiFormControlLabel-root {
+  display: inline-flex !important;
+  margin-right: 20px !important;
+}

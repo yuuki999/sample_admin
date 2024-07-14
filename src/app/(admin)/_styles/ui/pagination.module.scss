@@ -1,0 +1,105 @@
+// ページネーションを左右中央にする
+.container {
+  position: flex;
+  margin: 16px 0;
+}
+
+.visuallyhidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 16px 0;
+
+  a {
+    display: inline-block;
+    padding: 0.5rem 0.7rem;
+    background-color: #eee;
+    text-decoration: none;
+    color: black;
+
+    &:hover,
+    &:focus {
+      background-color: #ddd;
+    }
+  }
+}
+
+.pagination__prev {
+  &::before {
+    content: "<";
+  }
+}
+
+.pagination__next {
+  &::before {
+    content: ">";
+  }
+}
+
+.pagination__items {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  margin: 0 1px;
+
+  li {
+    position: absolute;
+    top: -100vh;
+    margin: 0 4px;
+
+    &:first-child,
+    &:last-child {
+      position: static;
+    }
+
+    &.is_active {
+      position: static;
+
+      &:not(:nth-child(1)):not(:nth-child(2)) {
+        &::before {
+          content: "...";
+          display: inline-block;
+          padding: 0.5rem 0.7rem;
+          margin-right: 2px;
+        }
+      }
+
+      & + li,
+      & + li + li {
+        position: static;
+      }
+
+      & + li + li:not(:last-child):not(:nth-last-child(2)) {
+        &::after {
+          content: "...";
+          display: inline-block;
+          padding: 0.5rem 0.7rem;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  .is_active a {
+    background-color: black;
+    color: white;
+  }
+}
+
+.pagination_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

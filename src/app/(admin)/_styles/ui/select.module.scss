@@ -1,0 +1,25 @@
+@use "../../_const/const.scss" as const;
+
+.select {
+  border-radius: 5px;
+  border: 1px solid const.$lightGraySolid;
+  width: 192px;
+  height: 34px;
+  padding: 6px 16px;
+
+  &:focus {
+    outline: none;
+    border-color: const.$blue;
+  }
+
+  // デフォルトの矢印を非表示
+  appearance: none;
+  -webkit-appearance: none; // Chrome, Safari, older versions of Edge
+  -moz-appearance: none; // Fir
+}
+
+.error_msg {
+  color: const.$errorColor;
+  margin-top: 2px;
+  font-size: 12px;
+}
